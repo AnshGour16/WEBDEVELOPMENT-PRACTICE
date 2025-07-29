@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <input type="text"></input>
+        <button onclick="addTodo()">Add Task</button>
+    </body>
+    <script>
+        let todos = [];
+        function addTodo(){
+            todos.push({
+                title: document.querySelector("input").value
+            
+        })
+        render();
+
+        }
+        function render(){
+            for(let i=0;i<todos.length;i++){
+                const todos =todos[i];
+                const div=document.craeteElement("div");
+                const h1=document.createElement("h1");
+                const button=document.createElement("button");
+                button.innerText="Delete";
+                h1.innerHTML=todos.title;
+                div.append(h1)
+                div.append(button)
+             document.quertySelector("body").append(div);
+
+            }
+        }
+    </script>
+</html>

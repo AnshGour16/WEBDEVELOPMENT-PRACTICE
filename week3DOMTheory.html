@@ -1,0 +1,56 @@
+         html
+        /     \
+     head     body
+     /   \       \
+ title   meta    h1
+
+html is the root.
+
+head and body are children of html.
+
+title and meta are children of head.
+
+h1 is a child of body.
+
+The DOM abstracts the structure of the document into a tree of objects
+
+DOM allowing scripts to manipulate the content and structure dynamically 
+
+Static HTML:-represents HTMLthat doesnot change
+
+Dynamic HTML:-represemts HTML in which we can do updates 
+
+
+There are 5 popular methods available for fetching DOM elements
+.querySelector
+.querySelectll
+.getElementById
+.getElementByClassName
+.getElementsByClassName
+
+Updating Elements:-
+.innerHTML
+Injecting HTML templates.
+
+Dynamically updating content in response to user actions.
+
+
+Deleting element
+ function deleteTodo(index){
+            const element=document.getElementById("todo-"+index);
+            //element.destroy();
+            element.parentNode.removeChild(element);
+        }
+
+Adding element 
+createElement
+appendChild
+
+
+//state derived components
+to make frontend easier to code ,the concvept of state came into the picture 
+
+There are 3 jagron we need to understand
+1. State:the variable parts of an app
+2.component: how to render state on screen
+3.Rendering: taking the state and rendering it on DOM based on the components

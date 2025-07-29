@@ -1,0 +1,51 @@
+<html>
+  <body>
+    <input type="text"></input> 
+    <button onclick="addTodo()">Add Task</button> 
+  </body>
+  <script>
+    let ctr = 1;
+
+    function deleteTodo(index) {
+      const element = document.getElementById(index);
+      element.parentNode.removeChild(element);
+    }
+
+    function addTodo() {
+      const inputEl = document.querySelector("input");
+      const value = inputEl.value;
+
+      const newDivEl = document.createElement("div");
+      newDivEl.setAttribute("id", ctr);
+      newDivEl.innerHTML = "<div>" + value + "</div><button onclick='deleteTodo(" + ctr + ")'>delete</button>";
+      ctr = ctr + 1; // moved this line down so button and div use the same id
+
+      document.querySelector("body").appendChild(newDivEl);
+    }
+  </script>
+</html>
+<!--<html>
+    <body>
+      <input type="text"></input>
+      <button onclick="addTodo()">Add Task</button>
+       
+    </body>
+    <script>
+    function addTodo(){
+        const value=document.querySelector("input").value;
+        const span=document.createElement("span");
+        const button=document.createElement("button");
+        span.innerHTML=value;
+        button.innerHTML="Delete";
+        const divEl=document.createElement("div");
+        divEl.appendChild(span);
+        divEl.appendChild(button);
+        document.querySelector("body").appendChild(divEl);
+     
+    }
+
+    </script>
+</html>
+-->
+
+

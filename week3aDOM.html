@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo list</title>
+  </style>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <div>
+        <div id="todo-1" style="display:flex;">
+        <h4>Take class</h4>  
+        <button onclick="deleteTodo(1)">Delete</button>  
+        </div>
+
+        <div id="todo-2" style="display:flex;">
+            <h4>Go out to eat</h4>
+         <button onclick="deleteTodo(2)">Delete</button> 
+         </div>
+    </div>
+    <div>
+        <input type="text"></input>
+        <button> Add Todo</button>
+    </div>
+    <script>
+        function deleteTodo(index){
+            const element=document.getElementById("todo-"+index);
+            //element.destroy();
+            element.parentNode.removeChild(element);
+        }
+
+
+
+    //     let ctr=0;
+    //     function callback(){
+    //      document.querySelectorAll("h2")[1].innerHTML=ctr;
+    //         ctr=ctr+1;
+    //     }
+    //   setInterval(callback,1000);
+
+    //     function addTodo(){
+    //     const inputElement=document.querySelector("input");
+    //     const value=inputElement.value;
+    //     console.log(value);
+    //     }
+    </script>
+
+</body>
+</html>
